@@ -184,19 +184,6 @@ public class listenv extends HttpServlet {
 		out.append("</html>\n");
 
 
-		//writing to JSON
-
-		//Car car = new Car("yellow", "renault");
-		//objectMapper.writeValue(new File("C:/software/Tomcat/tomcat9/apache-tomcat-9.0.10/data/car.json"), car);
-		//ListEnvData listenv=new ListEnvData();
-		//objectMapper.writeValue(new File("C:/software/Tomcat/tomcat9/apache-tomcat-9.0.10/data/listenvironment.json"), listenv);
-
-
-
-
-
-
-
 	}
 
 	/**
