@@ -8,9 +8,9 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="C:/software/Tomcat/xavprgateway/apache-tomcat-7.0.27/lib/servlet-api.jar"/>
-	<classpathentry kind="lib" path="C:/XavPerso/project/DashboarLord/jackson/jackson-annotations-2.9.6.jar"/>
-	<classpathentry kind="lib" path="C:/XavPerso/project/DashboarLord/jackson/jackson-core-2.9.6.jar"/>
-	<classpathentry kind="lib" path="C:/XavPerso/project/DashboarLord/jackson/jackson-databind-2.9.6.jar"/>
+	<classpathentry kind="lib" path="/home/ewa/git/DashboardLord/dashboardlord/WebContent/WEB-INF/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="/home/ewa/git/DashboardLord/dashboardlord/WebContent/WEB-INF/lib/jackson-annotations-2.9.6.jar"/>
+	<classpathentry kind="lib" path="/home/ewa/git/DashboardLord/dashboardlord/WebContent/WEB-INF/lib/jackson-core-2.9.6.jar"/>
+	<classpathentry kind="lib" path="/home/ewa/git/DashboardLord/dashboardlord/WebContent/WEB-INF/lib/jackson-databind-2.9.6.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
