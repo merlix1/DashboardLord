@@ -1,6 +1,7 @@
 # DashboardLord
+Working locally but need more work to be portable.
 
-Small Utility to share and centralize environment information accross the team
+Small web app Utility to share and centralize environment information accross the team.
 
 
 Important Note:
@@ -9,3 +10,6 @@ http://yourhost:port/dashboardlord/Configservlet
 
 A folder used to store data neeeds to be specified such as:
 /apache-tomcat-8.5.24/data/
+
+This needs to be done first before accessing main page at:
+http://yourhost:port/dashboardlord/listenv
