@@ -2,7 +2,9 @@ package dashboardlord;
 
 public class Config {
 
-	public static String datapath="C:/software/Tomcat/tomcat9/apache-tomcat-9.0.10/data/";
+	
+	
+	public static String datapath=System.getProperty("catalina.home")+"/data/";
 
 
 
