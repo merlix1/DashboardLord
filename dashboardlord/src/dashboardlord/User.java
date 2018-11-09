@@ -2,7 +2,9 @@ package dashboardlord;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.core.JsonParseException;
@@ -23,8 +25,29 @@ public class User {
 		try {
 
 			JavaType collectionType = objectMapper.getTypeFactory().constructCollectionType(List.class, User.class);
-			//List<MyObject> readValue = mapper.readValue(jsonString, collectionType);
-			//listuser = objectMapper.readValue(new File("C:/software/Tomcat/tomcat9/apache-tomcat-9.0.10/data/listuser.json"), collectionType);
+			
+			
+			File datafolder = new File(Config.datapath);
+			if(!datafolder.exists()) { 
+				new File(Config.datapath).mkdirs();
+			}
+			File listuserfile=new File(Config.datapath+"listuser.json");
+			listuserfile.createNewFile();
+			if(listuserfile.length()==0)
+			{
+				//User dummy=new User("dummy","dummy");
+				HashMap <String,String> listuserhash=new HashMap();
+				listuserhash.put("dummy", "dummy");
+				
+			    Controller controller=Controller.getInstance();
+			     controller.doCall("adduser", listuserhash);
+				
+			}
+			
+			
+			
+			
+			
 			listuser = objectMapper.readValue(new File(Config.datapath+"listuser.json"), collectionType);
 		} catch (JsonParseException e) {
 			// TODO Auto-generated catch block
@@ -78,7 +101,7 @@ public class User {
 		ObjectMapper objectMapper = new ObjectMapper();
 		//Car car = new Car("yellow", "renault");
 		try {
-			objectMapper.writeValue(new File("C:/software/Tomcat/tomcat9/apache-tomcat-9.0.10/data/listuser.json"), listuser);
+			objectMapper.writeValue(new File(System.getProperty("catalina.home")+"/data/listuser.json"), listuser);
 		} catch (JsonGenerationException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

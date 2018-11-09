@@ -30,10 +30,16 @@ public class Environment {
 			Set<Environment> envsetperuser;
 			JavaType collectionType = objectMapper.getTypeFactory().constructCollectionType(Set.class, Environment.class);
 			try {
-				//envsetperuser = objectMapper.readValue(new File("C:/software/Tomcat/tomcat9/apache-tomcat-9.0.10/data/"+user.getId()+"_env.json"), collectionType);
-
-				envsetperuser = objectMapper.readValue(new File(Config.datapath+user.getId()+"_env.json"), collectionType);
-				listenv.addAll(envsetperuser);
+				
+				//create file for user if it doesn't exist
+				File listuserenv=new File(Config.datapath+user.getId()+"_env.json");
+				listuserenv.createNewFile();
+				
+				if(listuserenv.length()!=0)
+				{
+					envsetperuser = objectMapper.readValue(new File(Config.datapath+user.getId()+"_env.json"), collectionType);
+					listenv.addAll(envsetperuser);
+				}
 			} catch (JsonParseException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -212,8 +218,7 @@ public class Environment {
 		//Car car = new Car("yellow", "renault");
 		try {
 
-			//objectMapper.writeValue(new File("C:/software/Tomcat/tomcat9/apache-tomcat-9.0.10/data/"+owner+"_env.json"), listenv);
-
+		
 			objectMapper.writeValue(new File(Config.datapath+owner+"_env.json"), listenv);
 
 		} catch (JsonGenerationException e) {

@@ -41,11 +41,7 @@ public class listenv extends HttpServlet {
 		String user=Util.authenticate(host).getName();
 		String id=Util.authenticateid(host);
 
-		//load listenv data from JSON
-		//ObjectMapper objectMapper = new ObjectMapper();
-		//ListEnvData listenvdata = objectMapper.readValue(new File("C:/software/Tomcat/tomcat9/apache-tomcat-9.0.10/data/listenvironment.json"), ListEnvData.class);
-		//List<Environment> listenv=listenvdata.getListEnv();
-
+		
 		PrintWriter out= response.getWriter();
 				//.append("Served at: ").append(request.getContextPath());
 		out.append("<html>\n");
