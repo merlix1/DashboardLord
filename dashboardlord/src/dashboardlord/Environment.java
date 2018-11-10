@@ -40,6 +40,7 @@ public class Environment {
 					envsetperuser = objectMapper.readValue(new File(Config.datapath+user.getId()+"_env.json"), collectionType);
 					listenv.addAll(envsetperuser);
 				}
+				
 			} catch (JsonParseException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

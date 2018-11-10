@@ -31,6 +31,7 @@ public class User {
 			if(!datafolder.exists()) { 
 				new File(Config.datapath).mkdirs();
 			}
+			
 			File listuserfile=new File(Config.datapath+"listuser.json");
 			listuserfile.createNewFile();
 			if(listuserfile.length()==0)
